@@ -1,8 +1,10 @@
-# React + Vite
+# Dashboard-Highway-Administration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Use React, Material UI, ECharts, and Data Grid to build this entire application.
 
-Currently, two official plugins are available:
+This application consists of Light and Dark Mode, 4 different Charts, 3 different Data Table Pages. The dashboard page includes 4 measure cards, 1 scrollable data table, 4 different Charts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This application is based on Vite, which provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+![image](https://github.com/JasmineSong666/Dashboard-Highway-Administration/assets/145217761/5bc40563-ebce-4518-8b84-dbaacdf9e5fa)
+
