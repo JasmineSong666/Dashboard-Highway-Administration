@@ -134,9 +134,9 @@ export default function Dashboard() {
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          display="flex"
-          flexDirection="column" // Stack children vertically
-          alignItems="center" // Horizontally center children
+          // display="flex"
+          // flexDirection="column" // Stack children vertically
+          // alignItems="center" // Horizontally center children
         >
           <Box
             mt="25px"
@@ -170,7 +170,8 @@ export default function Dashboard() {
               </IconButton>
             </Box>
           </Box>
-          <Box height="auto" width="auto" m="10px 0 0 0" display="flex">
+          <Box>
+            {/* height="auto" width="auto" m="10px 0 0 0" display="flex" */}
             <BarChart isDashboard={true} />
           </Box>
         </Box>
@@ -262,7 +263,8 @@ export default function Dashboard() {
           <Typography variant="h5" fontWeight="600">
             养护事件分布
           </Typography>
-          <Box width="auto" height="auto">
+          <Box>
+            {/* width="auto" height="auto" */}
             <GeographyChart isDashboard={true} />
           </Box>
         </Box>

@@ -112,12 +112,13 @@ export default function LineChart({ isDashboard = "false" }) {
   };
 
   return (
-    <Box display="flex" justifyContent="center">
+    <Box>
+      {/* //display="flex" justifyContent="center" */}
       <ReactECharts
         option={option}
         style={{
           height: isDashboard ? "25vh" : "60vh",
-          width: isDashboard ? "40vw" : "100%",
+          // width: isDashboard ? "40vw" : "100%",
         }}
         opts={{ renderer: "svg" }}
       />

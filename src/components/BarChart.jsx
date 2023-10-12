@@ -113,7 +113,7 @@ export default function BarChart({ isDashboard = false }) {
         option={option}
         style={{
           height: isDashboard ? "22vh" : "60vh",
-          width: isDashboard ? "45vw" : "100%",
+          // width: isDashboard ? "45vw" : "100%",
         }}
         opts={{ renderer: "svg" }}
       />

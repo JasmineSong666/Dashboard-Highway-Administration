@@ -114,7 +114,7 @@ export default function GeographyChart({ isDashboard = "false" }) {
     <Box
       ref={chartRef}
       height={isDashboard ? "25vh" : "70vh"}
-      width={isDashboard ? "30vw" : "100%"}
+      // width={isDashboard ? "30vw" : "100%"}
     ></Box>
   );
 }
