@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 import { tokens } from "../theme";
 import { Box, useTheme } from "@mui/material";
@@ -7,12 +7,9 @@ import data from "../assets/mapdata.json";
 export default function GeographyChart({ isDashboard = "false" }) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const chartRef = useRef(null);
   useEffect(() => {
-    if (myChart && myChart.dispose) {
-      myChart.dispose();
-    }
-
-    var chartDom = document.getElementById("main");
+    const chartDom = chartRef.current;
     var myChart = echarts.init(chartDom);
     myChart.showLoading();
     // myChart.hideLoading();
@@ -107,17 +104,17 @@ export default function GeographyChart({ isDashboard = "false" }) {
         },
       ],
     };
-
-    myChart.setOption(option);
+    option && myChart.setOption(option);
+    return () => {
+      myChart.dispose();
+    };
   }, []);
 
   return (
-    <>
-      <Box
-        id="main"
-        height={isDashboard ? "25vh" : "70vh"}
-        width={isDashboard ? "60vh" : "100%"}
-      ></Box>
-    </>
+    <Box
+      ref={chartRef}
+      height={isDashboard ? "25vh" : "70vh"}
+      width={isDashboard ? "30vw" : "100%"}
+    ></Box>
   );
 }
